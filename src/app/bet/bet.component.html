@@ -1,16 +1,17 @@
 
-
-
 <div  *ngIf="bet" class="container">
   <div class="row">
     {{bet.title}}
     <br>
-    {{bet.answer_a}}: {{bet.answer_a_count}} votes
+
+    {{bet.answer_a}}: {{bet.percentage('a').toFixed(2)}}%
     <button (click)="vote('a')">Vote A</button>
     <br>
-    {{bet.answer_b}}: {{bet.answer_b_count}} votes
+
+    {{bet.answer_b}}: {{bet.percentage('b').toFixed(2)}}%
     <button (click)="vote('b')">Vote B</button>
     <br>
+
     live stream: {{live_stream_connected}}
   </div>
 </div>
