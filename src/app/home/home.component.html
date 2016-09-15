@@ -1,0 +1,110 @@
+<app-header></app-header>
+
+
+<section id="latest_bets" *ngIf="latest_bets.length > 0">
+
+  <div class="container">
+
+    <div class="row">
+
+
+
+
+
+
+      <div class="list-group">
+        <a *ngFor="let bet of latest_bets" [routerLink]="['/bet', bet.id]"  class="list-group-item">
+          <h4 class="list-group-item-heading">{{bet.title}}</h4>
+          <p class="list-group-item-text">{{bet.answer_a}}: {{bet.percentage('a').toFixed(2)}}%</p>
+          <p class="list-group-item-text">{{bet.answer_b}}: {{bet.percentage('b').toFixed(2)}}%</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- new bet Section -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Create a new bet</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <form name="sentMessage"  id="contactForm" novalidate>
+          <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Title</label>
+              <input type="text" [(ngModel)]="new_bet.title" name="title" class="form-control" placeholder="Title"  required data-validation-required-message="Title required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Answer A:</label>
+              <input type="text" [(ngModel)]="new_bet.answer_a" name="answer_a" class="form-control" placeholder="Answer A..."  required data-validation-required-message="Answer A required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Answer B:</label>
+              <input type="text" [(ngModel)]="new_bet.answer_b" name="answer_b" class="form-control" placeholder="Answer B..."  required data-validation-required-message="Answer B required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+
+
+          <!--<div class="row control-group">-->
+            <!--<div class="form-group col-xs-12 floating-label-form-group controls">-->
+              <!--<label>Expiry date:</label>-->
+              <!--<datepicker  ></datepicker>-->
+              <!--<p class="help-block text-danger"></p>-->
+            <!--</div>-->
+          <!--</div>-->
+
+
+          <br>
+
+          <div id="success"></div>
+          <div class="row">
+            <div class="form-group col-xs-12">
+              <button (click)="create_bet()" class="btn btn-success btn-lg">Create</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--&lt;!&ndash; About Section &ndash;&gt;-->
+<!--<section class="success" id="about">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-lg-12 text-center">-->
+        <!--<h2>About</h2>-->
+        <!--<hr class="star-light">-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-lg-4 col-lg-offset-2">-->
+        <!--<p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>-->
+      <!--</div>-->
+      <!--<div class="col-lg-4">-->
+        <!--<p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>-->
+      <!--</div>-->
+
+    <!--</div>-->
+  <!--</div>-->
+<!--</section>-->
+

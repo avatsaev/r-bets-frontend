@@ -1,0 +1,17 @@
+
+
+
+<div  *ngIf="bet" class="container">
+  <div class="row">
+    {{bet.title}}
+    <br>
+    {{bet.answer_a}}: {{bet.answer_a_count}} votes
+    <button (click)="vote('a')">Vote A</button>
+    <br>
+    {{bet.answer_b}}: {{bet.answer_b_count}} votes
+    <button (click)="vote('b')">Vote B</button>
+    <br>
+    live stream: {{live_stream_connected}}
+  </div>
+</div>
+
