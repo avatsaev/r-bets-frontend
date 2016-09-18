@@ -54,6 +54,7 @@ export class BetComponent implements OnInit {
             this.bet = new Bet(bet_json.bet);
             this.cable = ActionCable.createConsumer(environment.actioncable.url);
 
+
             this.cable_bet_subscription = this.cable.subscriptions.create({
                 channel: "BetChannel",
                 bet_id: this.bet.id
@@ -61,6 +62,7 @@ export class BetComponent implements OnInit {
               {
                 connected: () => {
                   this.live_stream_connected = true;
+                  console.log("connected...")
                 },
                 disconnected: () => {
                   console.log("cable disconnected");

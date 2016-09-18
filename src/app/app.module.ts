@@ -7,7 +7,7 @@ import { routing, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
 import {HomeComponent} from './home'
 import {BetComponent} from './bet'
-import {ToolbarComponent, FooterComponent, HeaderComponent} from './shared/layout_components'
+import {ToolbarComponent, FooterComponent, HeaderComponent} from './shared/layout_components';
 
 
 @NgModule({
