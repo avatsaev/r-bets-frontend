@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { routing, appRoutingProviders } from './app.routing';
+import Routes from './app.routing';
 
 import { AppComponent } from './app.component';
 import {HomeComponent} from './home'
@@ -23,9 +23,9 @@ import {ToolbarComponent, FooterComponent, HeaderComponent} from './shared/layou
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    Routes
   ],
-  providers: [appRoutingProviders],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
