@@ -5,5 +5,8 @@ export const environment = {
   },
   api:{
     url: "http://ec2-54-87-134-1.compute-1.amazonaws.com/api/v1/"
+  },
+  backend:{
+    url: "ec2-54-87-134-1.compute-1.amazonaws.com"
   }
 };

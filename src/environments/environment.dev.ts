@@ -5,5 +5,8 @@ export const environment = {
     },
     api:{
         url: "http://localhost:3000/api/v1/"
+    },
+    backend:{
+        url: "localhost:3000"
     }
 };
