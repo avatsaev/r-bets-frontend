@@ -1,12 +1,13 @@
 export const environment = {
   production: true,
   actioncable:{
-    url: "ws://ec2-54-166-197-95.compute-1.amazonaws.com/cable"
+    url: "ws://rbetsbackend-elb-1585192350.us-east-1.elb.amazonaws.com/cable"
   },
   api:{
-    url: "http://ec2-54-166-197-95.compute-1.amazonaws.com/api/v1/"
+    url: "http://rbetsbackend-elb-1585192350.us-east-1.elb.amazonaws.com/api/v1/"
   },
   backend:{
-    url: "ec2-54-210-116-35.compute-1.amazonaws.com"
+    url: "rbetsbackend-elb-1585192350.us-east-1.elb.amazonaws.com"
   }
 };
+
