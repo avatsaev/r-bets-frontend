@@ -1,9 +1,9 @@
 export const environment = {
-  production: false,
+  production: true,
   actioncable:{
-    url: "ws://localhost:3000/cable"
+    url: "ws://ec2-54-87-134-1.compute-1.amazonaws.com/cable"
   },
   api:{
-    url: "http://localhost:3000/api/v1/"
+    url: "http://ec2-54-87-134-1.compute-1.amazonaws.com/api/v1/"
   }
 };
