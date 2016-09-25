@@ -12,7 +12,7 @@ declare let ActionCable:any;
 @Component({
   selector: 'app-bet',
   templateUrl: 'bet.component.html',
-  styleUrls: ['bet.component.css'],
+  styleUrls: ['bet.component.sass'],
   providers: [BetService]
 })
 
