@@ -1,16 +1,16 @@
 "use strict";
 
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const cookieParser = require('cookie-parser');
-
-const bodyParser = require('body-parser');
+let express = require('express');
+let path = require('path');
+let favicon = require('serve-favicon');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let bodyParser = require('body-parser');
 
 let app = express();
 
 
-
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
