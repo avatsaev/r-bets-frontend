@@ -16,6 +16,7 @@
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
     "serve-favicon": "~2.3.0",
+    "morgan": "~1.7.0",
     "@angular/compiler": "2.0.0",
     "@angular/core": "2.0.0",
     "@angular/forms": "2.0.0",
