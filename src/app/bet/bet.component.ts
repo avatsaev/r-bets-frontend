@@ -39,7 +39,7 @@ export class BetComponent implements OnInit {
 
     this.sub = this.route.params.subscribe(params => {
 
-      let id = +params['id'];
+      const id = +params['id'];
 
       this.bet_service.get_bet(id, (res) => {
 
