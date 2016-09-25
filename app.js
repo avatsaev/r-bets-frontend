@@ -9,6 +9,7 @@ let bodyParser = require('body-parser');
 
 let app = express();
 app.set('view engine', 'html');
+app.set('views', path.join(__dirname, 'dist'));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
