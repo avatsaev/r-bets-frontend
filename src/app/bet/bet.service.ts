@@ -21,8 +21,6 @@ export class BetService {
     let headers = new Headers();
     this.createAuthorizationHeader(headers);
 
-    console.log(headers);
-
     this.http.get(`${environment.api.url}/bets?${url_params}`, {headers}).subscribe(
       (res:Response) => callback(res)
     );

@@ -67,8 +67,6 @@ export class BetComponent implements OnInit {
 
                 received: (data) => {
 
-                  console.log("cable incoming ", data);
-
                   if(data.event){
 
                     switch (data.event){
@@ -104,34 +102,10 @@ export class BetComponent implements OnInit {
 
   }
 
-  // cable_connected(){
-  //
-  //
-  //   console.log("connected...")
-  //
-  // }
-  //
-  // cable_disconnected(){
-  //   console.log("cable disconnected");
-  //
-  // }
-  //
-  // cable_data_received(data:Object){
-  //
-  // }
 
   vote(answer){
 
-    // if(this.live_stream_connected){
-    //   this.cable_bet_subscription.perform('place_vote', {
-    //     bet_id: this.bet.id,
-    //     answer,
-    //     username: 'avatsaev'
-    //   });
-    // }
-    this.bet_service.vote_for_bet(this.bet, answer, (res)=>{
-      console.log(res)
-    });
+    this.bet_service.vote_for_bet(this.bet, answer, (res)=>{});
 
   }
 
