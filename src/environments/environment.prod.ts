@@ -5,7 +5,7 @@ export const environment = {
   },
   api:{
     url: "http://rbetsbackend-elb-1585192350.us-east-1.elb.amazonaws.com/api/v1/",
-    token: "test"
+    token: "oOpn2OZNrIohiKNqOwS7Xspmuqm4wDbMgrffbmb9Mtg"
 
   },
   backend:{
