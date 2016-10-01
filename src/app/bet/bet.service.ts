@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment'
-import {Http} from '@angular/http';
-import {Response} from "@angular/http";
+import {Http, Headers, Response, RequestOptions} from '@angular/http';
+import {Bet} from "./bet";
 
 
 
@@ -18,26 +18,63 @@ export class BetService {
       url_params = ""
     }
 
-    this.http.get(`${environment.api.url}/bets?${url_params}`).subscribe(
+    let headers = new Headers();
+    this.createAuthorizationHeader(headers);
+
+    console.log(headers);
+
+    this.http.get(`${environment.api.url}/bets?${url_params}`, {headers}).subscribe(
       (res:Response) => callback(res)
     );
   }
 
   get_bet(id: number, callback:Function){
 
-    this.http.get(`${environment.api.url}/bets/${id}`).subscribe(
+    let headers = new Headers();
+    this.createAuthorizationHeader(headers);
+
+    this.http.get(`${environment.api.url}/bets/${id}`, {headers}).subscribe(
       (res:Response) => callback(res)
     );
 
   };
 
-  create_bet(data:Object={}, callback:Function){
+  vote_for_bet(bet:Bet, answer:string, callback:Function){
 
-    const params = this.to_url_params(data);
+    let body = JSON.stringify({
+      'vote': {
+        'username': "Anonymous",
+        'answer': answer
+      }
+    });
 
-    this.http.post(`${environment.api.url}/bets?${params}`, '').subscribe(
-      (res:Response) => callback(res)
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    this.createAuthorizationHeader(headers);
+    let options = new RequestOptions({ headers: headers });
+
+    this.http.post(`${environment.api.url}/bets/${bet.id}/votes`, body, options).subscribe(
+        (res:Response) => callback(res)
     );
+
+  }
+
+  create_bet(bet:Bet, callback:Function){
+
+    let body = JSON.stringify({bet: bet});
+
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    this.createAuthorizationHeader(headers);
+    let options = new RequestOptions({ headers: headers });
+
+    this.http.post(`${environment.api.url}/bets`, body, options).subscribe(
+        (res:Response) => callback(res)
+    );
+
+
+  }
+
+  createAuthorizationHeader(headers:Headers) {
+    headers.append('Authorization', `Bearer ${environment.api.token}`);
   }
 
   to_url_params(params):String{

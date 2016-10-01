@@ -6,6 +6,7 @@ import { environment } from '../../environments/environment';
 import {Bet} from './bet';
 import {BetService} from './bet.service'
 import 'actioncable-js';
+import {log} from "util";
 
 declare let ActionCable:any;
 
@@ -60,15 +61,12 @@ export class BetComponent implements OnInit {
                 bet_id: this.bet.id
               },
               {
-                connected: () => {
-                  this.live_stream_connected = true;
-                  console.log("connected...")
-                },
-                disconnected: () => {
-                  console.log("cable disconnected");
-                  this.live_stream_connected = false;
-                },
+                connected: () => this.live_stream_connected = true,
+
+                disconnected: () => this.live_stream_connected = false,
+
                 received: (data) => {
+
                   console.log("cable incoming ", data);
 
                   if(data.event){
@@ -106,15 +104,35 @@ export class BetComponent implements OnInit {
 
   }
 
+  // cable_connected(){
+  //
+  //
+  //   console.log("connected...")
+  //
+  // }
+  //
+  // cable_disconnected(){
+  //   console.log("cable disconnected");
+  //
+  // }
+  //
+  // cable_data_received(data:Object){
+  //
+  // }
+
   vote(answer){
 
-    if(this.live_stream_connected){
-      this.cable_bet_subscription.perform('place_vote', {
-        bet_id: this.bet.id,
-        answer,
-        username: 'avatsaev'
-      });
-    }
+    // if(this.live_stream_connected){
+    //   this.cable_bet_subscription.perform('place_vote', {
+    //     bet_id: this.bet.id,
+    //     answer,
+    //     username: 'avatsaev'
+    //   });
+    // }
+    this.bet_service.vote_for_bet(this.bet, answer, (res)=>{
+      console.log(res)
+    });
+
   }
 
 

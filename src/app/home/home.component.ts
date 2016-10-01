@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
 
   create_bet(){
 
-    this.bet_service.create_bet(this.new_bet.to_params(), (res) => {
+    this.bet_service.create_bet(this.new_bet, (res) => {
 
       if(res.status >= 200 || res.status < 200){
         const bet_json = res.json();

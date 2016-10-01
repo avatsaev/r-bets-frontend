@@ -5,6 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "start": "node bin/www",
+    "ngserve": "ng server",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
@@ -21,6 +22,7 @@
     "@angular/platform-browser-dynamic": "2.0.0",
     "@angular/router": "3.0.0",
     "actioncable-js": "^5.0.0-rc2",
+    "angular2-jwt": "^0.1.23",
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
     "core-js": "^2.4.1",
