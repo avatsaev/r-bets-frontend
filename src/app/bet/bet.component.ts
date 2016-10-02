@@ -71,8 +71,6 @@ export class BetComponent implements OnInit {
 
                     switch (data.event){
                       case 'new_vote':
-                        console.log('vote received:', data.vote);
-                        console.log('for bet', data.bet);
                         this.bet.answer_a_count = data.bet.answer_a_count;
                         this.bet.answer_b_count = data.bet.answer_b_count;
                         break;
