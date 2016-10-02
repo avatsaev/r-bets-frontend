@@ -11,8 +11,8 @@
 
         <a *ngFor="let bet of latest_bets" [routerLink]="['/bet', bet.id]"  class="list-group-item">
           <h4 class="list-group-item-heading">{{bet.title}}</h4>
-          <p class="list-group-item-text">{{bet.answer_a}}: {{bet.percentage('a').toFixed(1)}}%</p>
-          <p class="list-group-item-text">{{bet.answer_b}}: {{bet.percentage('b').toFixed(1)}}%</p>
+          <p class="list-group-item-text">{{bet.answer_a}}: {{bet.percentage('a').toFixed(2)}}%</p>
+          <p class="list-group-item-text">{{bet.answer_b}}: {{bet.percentage('b').toFixed(2)}}%</p>
         </a>
 
       </div>
