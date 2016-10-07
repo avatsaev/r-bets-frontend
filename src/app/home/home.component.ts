@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
-
+import angularMaterialize from 'angular-materialize';
 import { Bet } from '../bet/bet'
 import { BetService } from '../bet'
 
