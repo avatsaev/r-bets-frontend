@@ -17,10 +17,10 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.app_serivce.health_check((res) =>{
-      console.log(res.json())
-      this.backend_instance = res.json().host
-    })
+    // this.app_serivce.health_check((res) =>{
+    //   console.log(res.json())
+    //   this.backend_instance = res.json().host
+    // })
   }
 
 }

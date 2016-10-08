@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
-import angularMaterialize from 'angular-materialize';
 import { Bet } from '../bet/bet'
 import { BetService } from '../bet'
+
 
 
 @Component({
@@ -17,9 +17,12 @@ export class HomeComponent implements OnInit {
   latest_bets:Array<Bet>;
 
   constructor(private bet_service:BetService, private router: Router) {
+
     this.latest_bets = new Array<Bet>();
     this.new_bet = new Bet();
+
     this.bet_service.get_bets({last: 4}, (res)=>{
+
       const result = res.json();
 
       for(let json_bet of result.bets){
@@ -27,6 +30,9 @@ export class HomeComponent implements OnInit {
       }
 
       this.latest_bets.reverse();
+
+
+
 
     });
   }
@@ -51,7 +57,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
   }
-
 
   goBack() {
     window.history.back();

@@ -1,0 +1,49 @@
+<div class="card blue-grey lighten-5">
+
+  <div class="card-content">
+
+    <a class="card-title center grey-text text-darken-4  " [routerLink]="['/bet', bet.id]" >
+      {{bet.title}}
+    </a>
+
+
+
+
+  </div>
+
+  <div class="card-action">
+
+      <span class="embed-bet--answer center">
+
+        <span class="answer">
+          {{bet.answer_a}}
+        </span>
+        <button (click)="vote('a')" class="btn-floating btn-large waves-effect waves-light red darken-1">
+           {{bet.percentage('a')}}%
+         </button>
+      </span>
+
+    <hr>
+
+    <span class="embed-bet--answer center">
+
+
+
+
+
+         <button  (click)="vote('b')" class="btn-floating btn-large waves-effect waves-light blue darken-1">
+           {{bet.percentage('b')}}%
+         </button>
+
+        <span class="answer">
+          {{bet.answer_b}}
+        </span>
+
+
+
+      </span>
+
+  </div>
+
+
+</div>

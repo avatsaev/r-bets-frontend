@@ -1,18 +1,53 @@
 
 <div  *ngIf="bet" class="container">
-  <div class="row">
-    {{bet.title}}
-    <br>
+  <div class="card blue-grey lighten-5">
 
-    {{bet.answer_a}}: {{bet.percentage('a').toFixed(2)}}% (votes: {{bet.answer_a_count}})
-    <button (click)="vote('a')">Vote A</button>
-    <br>
+    <div class="card-content">
 
-    {{bet.answer_b}}: {{bet.percentage('b').toFixed(2)}}% (votes: {{bet.answer_b_count}})
-    <button (click)="vote('b')">Vote B</button>
-    <br>
+      <h2 class="activator center "  >
+        {{bet.title}}
+      </h2>
 
-    live stream: {{live_stream_connected}}
+
+
+
+    </div>
+
+    <div class="card-action">
+
+      <span class="embed-bet--answer center">
+
+        <span class="answer">
+          {{bet.answer_a}}
+        </span>
+        <button (click)="vote('a')" class="btn-floating btn-large waves-effect waves-light red darken-1">
+           {{bet.percentage('a')}}%
+         </button>
+      </span>
+
+      <hr>
+
+      <span class="embed-bet--answer center">
+
+
+
+
+
+         <button  (click)="vote('b')" class="btn-floating btn-large waves-effect waves-light blue darken-1">
+           {{bet.percentage('b')}}%
+         </button>
+
+        <span class="answer">
+          {{bet.answer_b}}
+        </span>
+
+
+
+      </span>
+
+    </div>
+
+
   </div>
 </div>
 

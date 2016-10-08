@@ -25,9 +25,9 @@ export class Bet {
 
     if (this.answer_a_count + this.answer_b_count == 0) return 0;
     if(answer == 'a'){
-      return (this.answer_a_count * 100 / (this.answer_a_count + this.answer_b_count));
+      return Math.round(this.answer_a_count * 100 / (this.answer_a_count + this.answer_b_count));
     }else if(answer =='b'){
-      return (this.answer_b_count * 100 / (this.answer_a_count + this.answer_b_count));
+      return Math.round(this.answer_b_count * 100 / (this.answer_a_count + this.answer_b_count));
     }else{
       return -1;
     }

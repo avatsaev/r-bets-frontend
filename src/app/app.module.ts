@@ -7,7 +7,10 @@ import Routes from './app.routing';
 import { AppComponent } from './app.component';
 import {HomeComponent} from './home'
 import {BetComponent} from './bet'
-import {ToolbarComponent, FooterComponent, HeaderComponent} from './shared/layout_components';
+import {ToolbarComponent, FooterComponent} from './shared/layout_components';
+import {MaterializeDirective} from "angular2-materialize";
+import { EmbedBetComponent } from './embed-bet/embed-bet.component';
+
 
 
 @NgModule({
@@ -15,9 +18,10 @@ import {ToolbarComponent, FooterComponent, HeaderComponent} from './shared/layou
     AppComponent,
     ToolbarComponent,
     FooterComponent,
-    HeaderComponent,
     HomeComponent,
-    BetComponent
+    BetComponent,
+    MaterializeDirective,
+    EmbedBetComponent
   ],
   imports: [
     BrowserModule,

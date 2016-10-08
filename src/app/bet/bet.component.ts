@@ -6,7 +6,6 @@ import { environment } from '../../environments/environment';
 import {Bet} from './bet';
 import {BetService} from './bet.service'
 import 'actioncable-js';
-import {log} from "util";
 
 declare let ActionCable:any;
 
