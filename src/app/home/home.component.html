@@ -6,7 +6,7 @@
 
     <h5 class="">Lorem ipsum dolor sit amet, consectetur adipiscing </h5>
 
-    <button class="waves-effect btn-large red darken-2"><i class="material-icons left">add</i>Create</button>
+    <button pageScroll [pageScrollDuration]="350" [pageScrollOffset]="100" href="#create-form" class="waves-effect btn-large red darken-2"><i class="material-icons left">add</i>Create</button>
 
     <br>
     <br>
@@ -24,6 +24,11 @@
 
     <!--<a href="sdfdsf"> See more...</a>-->
     <div class="row">
+
+      <div class="progress" *ngIf="latest_bets.length == 0">
+        <div class="indeterminate"></div>
+      </div>
+
       <div class="col s12 l6 m6"  *ngFor="let bet of latest_bets" >
         <app-embed-bet [bet]="bet"></app-embed-bet>
       </div>
@@ -32,15 +37,12 @@
 
 
 
-
-
-
   </div>
 
 </div>
 
 <div class="section ribbon light-ribbon">
-  <h2 class="center">
+  <h2 class="center" id="create-form">
     Create a new Bet
   </h2>
   <form class="container s6">
@@ -52,7 +54,7 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input [(ngModel)]="new_bet.answer_a" placeholder="..." name="answer_a" type="text" class="validate">
+        <input [(ngModel)]="new_bet.answer_a" placeholder="..." name="answer_a" type="text" class="validate ">
         <label for="answer_a">Answer A:</label>
       </div>
     </div>

@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import Routes from './app.routing';
+import { MaterializeModule } from "angular2-materialize";
+
 
 import { AppComponent } from './app.component';
-import {HomeComponent} from './home'
-import {BetComponent} from './bet'
-import {ToolbarComponent, FooterComponent} from './shared/layout_components';
-import {MaterializeDirective} from "angular2-materialize";
+import { HomeComponent } from './home'
+import { BetComponent } from './bet'
+import { ToolbarComponent, FooterComponent } from './shared/layout_components';
 import { EmbedBetComponent } from './embed-bet/embed-bet.component';
-
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 
 @NgModule({
@@ -20,14 +21,15 @@ import { EmbedBetComponent } from './embed-bet/embed-bet.component';
     FooterComponent,
     HomeComponent,
     BetComponent,
-    MaterializeDirective,
     EmbedBetComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    Routes
+    Routes,
+    Ng2PageScrollModule,
+    MaterializeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
