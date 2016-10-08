@@ -16,7 +16,7 @@
     <span class="embed-bet--answer center">
 
       <span class="answer">
-        {{bet.answer_a}}
+        {{bet.answer_a}} ({{bet.answer_a_count}} votes)
       </span>
       <button (click)="vote('a')" class="btn-floating btn-large waves-effect red darken-1">
          {{bet.percentage('a')}}%
@@ -32,7 +32,7 @@
          </button>
 
         <span class="answer">
-          {{bet.answer_b}}
+          {{bet.answer_b}} ({{bet.answer_b_count}} votes)
         </span>
 
 

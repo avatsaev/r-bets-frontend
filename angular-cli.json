@@ -18,7 +18,8 @@
         "styles.sass"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.js"
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/ng2-page-scroll/bundles/ng2-page-scroll.js"
       ],
       "environments": {
         "source": "environments/environment.ts",

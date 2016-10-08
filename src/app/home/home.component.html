@@ -7,7 +7,7 @@
     <h5 class="">Lorem ipsum dolor sit amet, consectetur adipiscing </h5>
 
     <button pageScroll [pageScrollDuration]="350" [pageScrollOffset]="100" href="#create-form" class="waves-effect btn-large red darken-2"><i class="material-icons left">add</i>Create</button>
-
+    <!---->
     <br>
     <br>
   </div>
@@ -48,20 +48,20 @@
   <form class="container s6">
     <div class="row">
       <div class="input-field col s12">
-        <input [(ngModel)]="new_bet.title" placeholder="..." type="text" name="title">
+        <input [(ngModel)]="new_bet.title" id="title"  type="text" name="title">
         <label for="title">Title</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input [(ngModel)]="new_bet.answer_a" placeholder="..." name="answer_a" type="text" class="validate ">
+        <input [(ngModel)]="new_bet.answer_a"  name="answer_a" type="text" class="validate ">
         <label for="answer_a">Answer A:</label>
       </div>
     </div>
 
     <div class="row">
       <div class="input-field col s12">
-        <input [(ngModel)]="new_bet.answer_b" placeholder="..." name="answer_b" type="text" class="validate">
+        <input [(ngModel)]="new_bet.answer_b"  name="answer_b" type="text" class="validate">
         <label for="answer_b">Answer B:</label>
       </div>
     </div>
@@ -78,111 +78,3 @@
   </form>
 
 </div>
-
-<!--<app-header></app-header>-->
-
-
-<!--<section id="latest_bets" *ngIf="latest_bets.length > 0">-->
-
-  <!--<div class="container">-->
-
-    <!--<div class="row">-->
-
-      <!--<div class="list-group">-->
-
-        <!--<a *ngFor="let bet of latest_bets" [routerLink]="['/bet', bet.id]"  class="list-group-item">-->
-          <!--<h4 class="list-group-item-heading">{{bet.title}}</h4>-->
-          <!--<p class="list-group-item-text">{{bet.answer_a}}: {{bet.percentage('a').toFixed(2)}}%</p>-->
-          <!--<p class="list-group-item-text">{{bet.answer_b}}: {{bet.percentage('b').toFixed(2)}}%</p>-->
-        <!--</a>-->
-
-      <!--</div>-->
-
-    <!--</div>-->
-  <!--</div>-->
-
-<!--</section>-->
-
-<!--&lt;!&ndash; new bet Section &ndash;&gt;-->
-<!--<section id="contact">-->
-  <!--<div class="container">-->
-    <!--<div class="row">-->
-      <!--<div class="col-lg-12 text-center">-->
-        <!--<h2>Create a new bet.</h2>-->
-        <!--<hr class="star-primary">-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row">-->
-      <!--<div class="col-lg-8 col-lg-offset-2">-->
-        <!--<form name="sentMessage"  id="contactForm" novalidate>-->
-          <!--<div class="row control-group">-->
-            <!--<div class="form-group col-xs-12 floating-label-form-group controls">-->
-              <!--<label>Title</label>-->
-              <!--<input type="text" [(ngModel)]="new_bet.title" name="title" class="form-control" placeholder="Title"  required data-validation-required-message="Title required">-->
-              <!--<p class="help-block text-danger"></p>-->
-            <!--</div>-->
-          <!--</div>-->
-
-          <!--<div class="row control-group">-->
-            <!--<div class="form-group col-xs-12 floating-label-form-group controls">-->
-              <!--<label>Answer A:</label>-->
-              <!--<input type="text" [(ngModel)]="new_bet.answer_a" name="answer_a" class="form-control" placeholder="Answer A..."  required data-validation-required-message="Answer A required">-->
-              <!--<p class="help-block text-danger"></p>-->
-            <!--</div>-->
-          <!--</div>-->
-
-          <!--<div class="row control-group">-->
-            <!--<div class="form-group col-xs-12 floating-label-form-group controls">-->
-              <!--<label>Answer B:</label>-->
-              <!--<input type="text" [(ngModel)]="new_bet.answer_b" name="answer_b" class="form-control" placeholder="Answer B..."  required data-validation-required-message="Answer B required">-->
-              <!--<p class="help-block text-danger"></p>-->
-            <!--</div>-->
-          <!--</div>-->
-
-
-
-          <!--&lt;!&ndash;<div class="row control-group">&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="form-group col-xs-12 floating-label-form-group controls">&ndash;&gt;-->
-              <!--&lt;!&ndash;<label>Expiry date:</label>&ndash;&gt;-->
-              <!--&lt;!&ndash;<datepicker  ></datepicker>&ndash;&gt;-->
-              <!--&lt;!&ndash;<p class="help-block text-danger"></p>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-
-          <!--<br>-->
-
-          <!--<div id="success"></div>-->
-          <!--<div class="row">-->
-            <!--<div class="form-group col-xs-12">-->
-              <!--<button (click)="create_bet()" class="btn btn-success btn-lg">Create</button>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</form>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</section>-->
-
-
-<!--&lt;!&ndash;&lt;!&ndash; About Section &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;<section class="success" id="about">&ndash;&gt;-->
-  <!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-      <!--&lt;!&ndash;<div class="col-lg-12 text-center">&ndash;&gt;-->
-        <!--&lt;!&ndash;<h2>About</h2>&ndash;&gt;-->
-        <!--&lt;!&ndash;<hr class="star-light">&ndash;&gt;-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-      <!--&lt;!&ndash;<div class="col-lg-4 col-lg-offset-2">&ndash;&gt;-->
-        <!--&lt;!&ndash;<p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>&ndash;&gt;-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
-      <!--&lt;!&ndash;<div class="col-lg-4">&ndash;&gt;-->
-        <!--&lt;!&ndash;<p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>&ndash;&gt;-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-  <!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</section>&ndash;&gt;-->
-
