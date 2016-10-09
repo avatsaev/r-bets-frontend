@@ -21,17 +21,13 @@ export class HomeComponent implements OnInit {
     this.trending_bets = new Array<Bet>();
     this.new_bet = new Bet();
 
-    this.bet_service.get_trending_bets({last: 6}, (res)=>{
+    this.bet_service.get_trending_bets({first: 6}, (res)=>{
 
       const result = res.json();
 
       for(let json_bet of result.bets){
         this.trending_bets.push(new Bet(json_bet));
       }
-
-
-
-
 
     });
   }
