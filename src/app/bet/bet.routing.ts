@@ -3,7 +3,7 @@ import { BetComponent } from './bet.component';
 
 export const BetRoutes: Routes = [
   {
-    path: 'bet/:id',
+    path: 'argument/:id',
     component: BetComponent
   },
 ];
