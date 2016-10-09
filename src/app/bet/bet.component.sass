@@ -15,3 +15,44 @@
     display: block
     font-size: 18px
     color: $dark-text
+
+
+
+@-webkit-keyframes blink
+  0%
+    opacity: 1
+
+  50%
+    opacity: .3
+
+  100%
+    opacity: 1
+
+
+@-moz-keyframes blink
+  0%
+    opacity: 1
+
+  50%
+    opacity: .3
+
+  100%
+    opacity: 1
+
+
+.objblink
+  -webkit-transition: all 1s easeInOutQuint
+  -moz-transition: all 1s easeInOutQuint
+  -o-transition: all 1s easeInOutQuint
+  -ms-transition: all 1s easeInOutQuint
+  transition: all 1s easeInOutQuint
+  -webkit-animation-direction: normal
+  -webkit-animation-duration: 3s
+  -webkit-animation-iteration-count: infinite
+  -webkit-animation-name: blink
+  -webkit-animation-timing-function: easeInOutQuint
+  -moz-animation-direction: normal
+  -moz-animation-duration: 3s
+  -moz-animation-iteration-count: infinite
+  -moz-animation-name: blink
+  -moz-animation-timing-function: easeInOutQuint
