@@ -27,6 +27,23 @@ export class BetService {
     );
   }
 
+  get_trending_bets(params:Object, callback:Function){
+    let url_params;
+
+    if(params){
+      url_params = this.to_url_params(params);
+    }else{
+      url_params = ""
+    }
+
+    let headers = new Headers();
+    this.createAuthorizationHeader(headers);
+
+    this.http.get(`${environment.api.url}/bets/trending?${url_params}`, {headers}).subscribe(
+        (res:Response) => callback(res)
+    );
+  }
+
   get_bet(id: number, callback:Function){
 
     let headers = new Headers();

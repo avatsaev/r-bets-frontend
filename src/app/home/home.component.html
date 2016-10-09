@@ -34,11 +34,11 @@
     <div class="row">
       <br>
 
-      <div class="progress" *ngIf="latest_bets.length == 0">
+      <div class="progress" *ngIf="trending_bets.length == 0">
         <div class="indeterminate"></div>
       </div>
 
-      <div class="col s12 l6 m6"  *ngFor="let bet of latest_bets" >
+      <div class="col s12 l6 m6"  *ngFor="let bet of trending_bets" >
         <app-embed-bet [bet]="bet"></app-embed-bet>
       </div>
 

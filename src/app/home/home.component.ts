@@ -14,22 +14,21 @@ import { BetService } from '../bet'
 
 export class HomeComponent implements OnInit {
   new_bet:Bet;
-  latest_bets:Array<Bet>;
+  trending_bets:Array<Bet>;
 
   constructor(private bet_service:BetService, private router: Router) {
 
-    this.latest_bets = new Array<Bet>();
+    this.trending_bets = new Array<Bet>();
     this.new_bet = new Bet();
 
-    this.bet_service.get_bets({last: 6}, (res)=>{
+    this.bet_service.get_trending_bets({last: 6}, (res)=>{
 
       const result = res.json();
 
       for(let json_bet of result.bets){
-        this.latest_bets.push(new Bet(json_bet));
+        this.trending_bets.push(new Bet(json_bet));
       }
 
-      this.latest_bets.reverse();
 
 
 
