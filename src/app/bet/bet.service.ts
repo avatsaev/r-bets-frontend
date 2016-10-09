@@ -40,11 +40,15 @@ export class BetService {
 
   vote_for_bet(bet:Bet, answer:string, callback:Function){
 
+    if(!localStorage.getItem('trio')){
+      localStorage.setItem('trio', UUID.UUID());
+    }
+
     let body = JSON.stringify({
       'vote': {
         'username': "Anonymous",
         'answer': answer,
-        'uuid': ''
+        'uuid': localStorage.getItem('trio')
       }
     });
 

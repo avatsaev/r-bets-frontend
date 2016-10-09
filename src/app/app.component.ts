@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UUID } from 'angular2-uuid';
 
 
 @Component({
@@ -12,9 +13,16 @@ export class AppComponent {
 
   constructor (){
     this.title = "RBets"
+
+    if(!localStorage.getItem('trio')){
+      localStorage.setItem('trio', UUID.UUID());
+    }
+
   }
 
   ngOnInit(){
+
+
 
   }
 }
