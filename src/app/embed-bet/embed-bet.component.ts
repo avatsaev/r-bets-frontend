@@ -3,7 +3,6 @@ import {BetService} from '../bet/bet.service'
 import {Bet} from '../bet/bet'
 import 'actioncable-js'
 import { environment } from '../../environments/environment';
-
 declare let ActionCable:any;
 
 @Component({
@@ -21,7 +20,12 @@ export class EmbedBetComponent implements OnInit {
 
   vote(answer){
 
-    this.bet_service.vote_for_bet(this.bet, answer, (res)=>{});
+    this.bet_service.vote_for_bet(this.bet, answer, (res)=>{
+      if(res.status == "error" ){
+        //Materialize.toast(res.msg, 1000, 'rounded')
+        alert(res.msg)
+      }
+    });
 
   }
 

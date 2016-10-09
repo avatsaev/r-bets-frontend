@@ -8,6 +8,7 @@ import {BetService} from './bet.service'
 import 'actioncable-js';
 
 declare let ActionCable:any;
+declare let Materialize:any;
 
 @Component({
   selector: 'app-bet',
@@ -102,7 +103,13 @@ export class BetComponent implements OnInit {
 
   vote(answer){
 
-    this.bet_service.vote_for_bet(this.bet, answer, (res)=>{});
+    this.bet_service.vote_for_bet(this.bet, answer, (res)=>{
+      console.log(res)
+      if(res.status == "error" ){
+       // Materialize.toast(err.msg, 3000, 'rounded')
+        alert(res.msg)
+      }
+    });
 
   }
 

@@ -51,7 +51,7 @@ export class BetService {
     let options = new RequestOptions({ headers: headers });
 
     this.http.post(`${environment.api.url}/bets/${bet.id}/votes`, body, options).subscribe(
-        (res:Response) => callback(res)
+        (res:Response) => callback(res.json())
     );
 
   }

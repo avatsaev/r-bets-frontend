@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
         const bet_json = res.json();
 
         if(bet_json.id){
-          this.router.navigate(['/bet', bet_json.id]);
+          this.router.navigate(['/argument', bet_json.id]);
         }
 
       }
