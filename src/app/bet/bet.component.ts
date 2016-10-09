@@ -8,7 +8,7 @@ import {BetService} from './bet.service'
 import 'actioncable-js';
 
 declare let ActionCable:any;
-declare let Materialize:any;
+
 
 @Component({
   selector: 'app-bet',

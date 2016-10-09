@@ -12,6 +12,7 @@ import { BetComponent } from './bet'
 import { ToolbarComponent, FooterComponent } from './shared/layout_components';
 import { EmbedBetComponent } from './embed-bet/embed-bet.component';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { BetsComponent } from './bets/bets.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
     FooterComponent,
     HomeComponent,
     BetComponent,
-    EmbedBetComponent
+    EmbedBetComponent,
+    BetsComponent
   ],
   imports: [
     BrowserModule,
