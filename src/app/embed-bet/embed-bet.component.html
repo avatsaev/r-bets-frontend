@@ -4,9 +4,10 @@
 
     <a class="card-title center grey-text text-darken-4  " [routerLink]="['/argument', bet.id]" >
       {{bet.title}}
+
     </a>
 
-
+    <span *ngIf="streaming" class="new right red small badge" data-badge-caption="">LIVE</span>
 
 
   </div>

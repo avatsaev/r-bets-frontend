@@ -13,6 +13,7 @@ import { ToolbarComponent, FooterComponent } from './shared/layout_components';
 import { EmbedBetComponent } from './embed-bet/embed-bet.component';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { BetsComponent } from './bets/bets.component';
+import { BetService } from './bet/bet.service'
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { BetsComponent } from './bets/bets.component';
     Ng2PageScrollModule,
     MaterializeModule
   ],
-  providers: [],
+  providers: [BetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

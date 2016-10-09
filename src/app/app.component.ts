@@ -13,16 +13,13 @@ export class AppComponent {
 
   constructor (){
     this.title = "RBets"
-
-    if(!localStorage.getItem('trio')){
-      localStorage.setItem('trio', UUID.UUID());
-    }
-
   }
 
   ngOnInit(){
 
-
-
+    if(!localStorage.getItem('trio')){
+      localStorage.setItem('trio', UUID.UUID());
+    }
   }
+
 }

@@ -3,8 +3,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { environment } from '../../environments/environment';
 
-import {Bet} from './bet';
-import {BetService} from './bet.service'
+import { Bet } from './bet';
+import { BetService } from './bet.service'
+
 import 'actioncable-js';
 
 declare let ActionCable:any;
@@ -13,8 +14,7 @@ declare let ActionCable:any;
 @Component({
   selector: 'app-bet',
   templateUrl: 'bet.component.html',
-  styleUrls: ['bet.component.sass'],
-  providers: [BetService]
+  styleUrls: ['bet.component.sass']
 })
 
 export class BetComponent implements OnInit {

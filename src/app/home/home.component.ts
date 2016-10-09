@@ -8,8 +8,7 @@ import { BetService } from '../bet'
 @Component({
   selector: 'app-home',
   templateUrl: 'home.component.html',
-  styleUrls: ['home.component.sass'],
-  providers: [BetService]
+  styleUrls: ['home.component.sass']
 })
 
 export class HomeComponent implements OnInit {
