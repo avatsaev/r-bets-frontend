@@ -1,15 +1,13 @@
 export const environment = {
   production: true,
   actioncable:{
-    url: "ws://rbetsbackend-elb-1585192350.us-east-1.elb.amazonaws.com/cable"
+      url: "ws://localhost:3000/cable"
   },
   api:{
-    url: "http://rbetsbackend-elb-1585192350.us-east-1.elb.amazonaws.com/api/v1/",
-    token: "oOpn2OZNrIohiKNqOwS7Xspmuqm4wDbMgrffbmb9Mtg"
-
+      url: "http://localhost:3000/api/v1/",
+      token: "mpBA6uX8lZJkdQ2dk2d9wU0YCQ_ssfkKqZByUKDnzVQ"
   },
   backend:{
-    url: "rbetsbackend-elb-1585192350.us-east-1.elb.amazonaws.com"
+      url: "localhost:3000"
   }
 };
-
