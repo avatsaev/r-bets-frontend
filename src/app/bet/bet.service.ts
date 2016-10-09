@@ -3,7 +3,7 @@ import { environment } from '../../environments/environment'
 import {Http, Headers, Response, RequestOptions} from '@angular/http';
 import {Bet} from "./bet";
 
-
+import { UUID } from 'angular2-uuid';
 
 
 @Injectable()
