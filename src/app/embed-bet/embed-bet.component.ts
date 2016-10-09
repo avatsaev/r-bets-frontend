@@ -41,6 +41,8 @@ export class EmbedBetComponent implements OnInit {
 
             if(data.event){
 
+              console.log(data)
+
               switch (data.event){
                 case 'new_vote':
                   this.bet.answer_a_count = data.bet.answer_a_count;
