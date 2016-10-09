@@ -5,6 +5,7 @@ import {Bet} from "./bet";
 
 
 
+
 @Injectable()
 export class BetService {
   constructor(public http: Http) {}
@@ -42,7 +43,8 @@ export class BetService {
     let body = JSON.stringify({
       'vote': {
         'username': "Anonymous",
-        'answer': answer
+        'answer': answer,
+        'uuid': ''
       }
     });
 

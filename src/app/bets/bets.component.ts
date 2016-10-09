@@ -6,7 +6,7 @@ import { BetService } from '../bet/bet.service'
   selector: 'app-bets',
   templateUrl: './bets.component.html',
   styleUrls: ['./bets.component.sass'],
-  providers: [BetService]g
+  providers: [BetService]
 })
 export class BetsComponent implements OnInit {
 
